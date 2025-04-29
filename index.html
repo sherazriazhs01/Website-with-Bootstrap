@@ -15,12 +15,16 @@
 
 
   <style>
+     @font-face {
+      font-family: Intimate, serif;
+      src: url(./Intimatedemo-Wpr0V.ttf);
+    }
 body {
     font-family: 'Playfair Display', serif;
   }
 
   .navbar-brand {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'IntimateDemo', Serid;
     font-size: 2rem;
     color: #f0c674 !important;
   }
@@ -70,23 +74,35 @@ body {
 
 <body>
 <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Cafe Delight</a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand logo-signature" href="index.html">Cafe Delight</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#menu">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="reviews.html">Reviews</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
   
 
   <!-- Hero Section with 3 Slides -->
@@ -180,6 +196,59 @@ body {
       </div>
     </div>
   </section>
+  <section class="container py-5">
+    <h2 class="text-center mb-5">What Our Customers Say</h2>
+    <div class="row g-4">
+      <!-- Review 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://i.pravatar.cc/50?img=1" class="rounded-circle me-3" alt="avatar">
+              <div>
+                <h6 class="mb-0">Sarah A.</h6>
+                <small class="text-muted">★★★★★</small>
+              </div>
+            </div>
+            <p class="card-text">Best cappuccino in town! The ambiance is cozy and staff is super friendly.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Review 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://i.pravatar.cc/50?img=3" class="rounded-circle me-3" alt="avatar">
+              <div>
+                <h6 class="mb-0">Ahmed R.</h6>
+                <small class="text-muted">★★★★☆</small>
+              </div>
+            </div>
+            <p class="card-text">Delicious food and quick service. I loved the chocolate cake!</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Review 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://i.pravatar.cc/50?img=5" class="rounded-circle me-3" alt="avatar">
+              <div>
+                <h6 class="mb-0">Fatima K.</h6>
+                <small class="text-muted">★★★★★</small>
+              </div>
+            </div>
+            <p class="card-text">A perfect spot to hangout with friends. Pasta Alfredo was amazing!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
   <!-- About Section -->
   <section id="about" class="py-5 bg-light">
