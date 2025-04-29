@@ -10,9 +10,30 @@
 
   <!-- AOS Library (Animate on Scroll) -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
 
   <style>
-    /* Custom styles */
+body {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #f0c674 !important;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 10px;
+    transition: color 0.3s;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #f0c674 !important;
+  }
+
     html {
       scroll-behavior: smooth;
     }
@@ -48,23 +69,25 @@
 </head>
 
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">Café Delight</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="index.html">Cafe Delight</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
         </ul>
       </div>
     </div>
   </nav>
+  
 
   <!-- Hero Section with 3 Slides -->
 <section id="home" class="py-3">
@@ -172,36 +195,6 @@
       </div>
     </div>
   </section>
-  <!-- Reviews Section -->
-<section class="container py-5">
-  <h2 class="text-center mb-5">What Our Customers Say</h2>
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <p class="card-text">"Best cappuccino in town! The ambiance is cozy and staff is super friendly."</p>
-          <h6 class="card-subtitle text-muted text-end">– Sarah A.</h6>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <p class="card-text">"Delicious food and quick service. I loved the chocolate cake!"</p>
-          <h6 class="card-subtitle text-muted text-end">– Ahmed R.</h6>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <p class="card-text">"A perfect spot to hangout with friends. Pasta Alfredo was amazing!"</p>
-          <h6 class="card-subtitle text-muted text-end">– Fatima K.</h6>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
   <!-- Contact Section -->
   <section id="contact" class="py-5">
