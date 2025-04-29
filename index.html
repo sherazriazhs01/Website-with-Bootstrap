@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café Delight</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Library (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Custom styles */
+    html {
+      scroll-behavior: smooth;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center/cover;
+      height: 90vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .menu-item img {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .menu-item img:hover {
+      transform: scale(1.05);
+    }
+    .btn-primary:hover {
+      background-color: #ff6f61;
+      border-color: #ff6f61;
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+    footer {
+      background-color: #343a40;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Café Delight</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with 3 Slides -->
+<section id="home" class="py-3">
+    <div class="container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-inner rounded-4 shadow">
+  
+          <!-- Slide 1: Welcome to Café Delight -->
+          <div class="carousel-item active">
+            <div class="hero d-flex align-items-center justify-content-center text-center" style="min-height: 90vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://media.istockphoto.com/id/1400194993/photo/cappuccino-art.jpg?s=612x612&w=0&k=20&c=_nYOcyQ15cYEeUYgUzkC5qG946nkCwU06NiWKt1s8SE=') no-repeat center center/cover;">
+              <div>
+                <h1 class="display-3 text-white" data-aos="fade-down">Welcome to Café Delight</h1>
+                <p class="lead text-white" data-aos="fade-up">Your daily dose of happiness</p>
+                <a href="#menu" class="btn btn-primary mt-3" data-aos="fade-up">View Menu</a>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 2: Fresh Brews, Bold Flavors -->
+          <div class="carousel-item">
+            <div class="hero d-flex align-items-center justify-content-center text-center" style="min-height: 90vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1511920170033-f8396924c348') no-repeat center center/cover;">
+              <div>
+                <h1 class="display-3 text-white" data-aos="fade-down">Fresh Brews, Bold Flavors</h1>
+                <p class="lead text-white" data-aos="fade-up">Explore the taste of our specialty drinks.</p>
+                <a href="#menu" class="btn btn-primary mt-3" data-aos="fade-up">Explore Flavors</a>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 3: Your Cozy Corner -->
+          <div class="carousel-item">
+            <div class="hero d-flex align-items-center justify-content-center text-center" style="min-height: 90vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') no-repeat center center/cover;">
+              <div>
+                <h1 class="display-3 text-white" data-aos="fade-down">Your Cozy Corner for Every Moment</h1>
+                <p class="lead text-white" data-aos="fade-up">Relax with friends or unwind by yourself.</p>
+                <a href="#contact" class="btn btn-primary mt-3" data-aos="fade-up">Visit Us</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Controls (Optional) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Our Menu</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="zoom-in">
+          <div class="card menu-item">
+            <img src="https://www.lasabbq.com/cdn/shop/products/espresso.jpg?v=1660633495" class="card-img-top" alt="Coffee">
+            <div class="card-body">
+              <h5 class="card-title">Espresso</h5>
+              <p class="card-text">Rich and bold espresso shot.</p>
+              <p class="text-muted">$3.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card menu-item">
+            <img src="https://www.cuisinart.com/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-us-cuisinart-sfra-Library/default/dw30047d66/images/recipe-Images/cappuccino1-recipe.jpg?sw=1200&sh=1200&sm=fit" class="card-img-top" alt="Latte">
+            <div class="card-body">
+              <h5 class="card-title">Cappuccino</h5>
+              <p class="card-text">Smooth coffee with steamed milk.</p>
+              <p class="text-muted">$4.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card menu-item">
+            <img src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_1500,ar_3:2/k%2FPhoto%2FRecipes%2F2024-01-chocolate-cake%2Fchocolate-cake-0632-edit-32" class="card-img-top" alt="Cake">
+            <div class="card-body">
+              <h5 class="card-title">Chocolate Cake</h5>
+              <p class="card-text">Decadent, rich chocolate dessert.</p>
+              <p class="text-muted">$5.50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <img src="https://m.media-amazon.com/images/I/61IHLDjNYoL._AC_UF1000,1000_QL80_.jpg" class="img-fluid rounded" alt="Cafe Interior">
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <h2>About Us</h2>
+          <p>At Café Delight, we believe in serving happiness one cup at a time. Our café is the perfect spot to unwind, work, or enjoy a good conversation over coffee and delicious treats. Welcome to your second home!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Reviews Section -->
+<section class="container py-5">
+  <h2 class="text-center mb-5">What Our Customers Say</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">"Best cappuccino in town! The ambiance is cozy and staff is super friendly."</p>
+          <h6 class="card-subtitle text-muted text-end">– Sarah A.</h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">"Delicious food and quick service. I loved the chocolate cake!"</p>
+          <h6 class="card-subtitle text-muted text-end">– Ahmed R.</h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">"A perfect spot to hangout with friends. Pasta Alfredo was amazing!"</p>
+          <h6 class="card-subtitle text-muted text-end">– Fatima K.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-right">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <h5>Visit Us</h5>
+          <p>123 Coffee Street,<br> Karachi, Pakistan</p>
+          <p>Email: info@cafedelight.com<br>Phone: +92 300 1234567</p>
+          <!-- Google Map Embed -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.6517017006004!2d67.054639774599!3d24.841582046014132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33d0027263109%3A0x5c83ebfc9a916343!2sDHA%20Phase%202%20Food%20Street!5e0!3m2!1sen!2s!4v1745868962040!5m2!1sen!2s" 
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p class="mb-0">© 2025 Café Delight. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
